@@ -1,12 +1,14 @@
 package com.erivan.cursomc.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.erivan.cursomc.domain.Categoria;
 import com.erivan.cursomc.repositories.CategoriaRepository;
+import com.erivan.cursomc.services.exceptions.ObjectNotFoundException;
 
-import java.util.Optional;
 
 @Service
 public class CategoriaService {
@@ -17,8 +19,9 @@ public class CategoriaService {
 	public Categoria buscar(Integer id){
 		
 		Optional<Categoria> obj = repo.findById(id);
-		return obj.orElse(null);
 		
+		return obj.orElseThrow(() -> new ObjectNotFoundException(
+				"Objeto não encontrado! Id: " +id+ ", Tipo: "+Categoria.class.getName()));
 	}
 
 }

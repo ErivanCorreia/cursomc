@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.erivan.cursomc.domain.Categoria;
 import com.erivan.cursomc.services.CategoriaService;
+ 
 
 @RestController
 @RequestMapping(value="/categoria")
@@ -24,7 +25,5 @@ public class CategoriaResources {
 		Categoria obj = service.buscar(id);
 		
 		return ResponseEntity.ok().body(obj);
-	}
-	
-	
+	}	
 }
