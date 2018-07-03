@@ -3,14 +3,19 @@ package com.erivan.cursomc.domain;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.erivan.cursomc.domain.enums.EstadoPagamento;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class PagamentoComBoleto extends Pagamento{
 	private static final long serialVersionUID = 1L;
 	
+	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataVencimento;
+	@JsonFormat(pattern="dd/MM/yyyy")
 	private Date dataPagamento;
 	
 	public PagamentoComBoleto() {
