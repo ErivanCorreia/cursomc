@@ -5,9 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.erivan.cursomc.domain.Cliente;
 import com.erivan.cursomc.domain.Pedido;
-import com.erivan.cursomc.domain.Produto;
 import com.erivan.cursomc.repositories.PedidoRepository;
 import com.erivan.cursomc.services.exceptions.ObjectNotFoundException;
 
