@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.erivan.cursomc.domain.Categoria;
 import com.erivan.cursomc.domain.Cliente;
-import com.erivan.cursomc.dto.CategoriaDTO;
 import com.erivan.cursomc.dto.ClienteDTO;
 import com.erivan.cursomc.services.ClienteService;
 
