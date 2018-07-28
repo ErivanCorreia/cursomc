@@ -29,7 +29,7 @@ public class ProdutoResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	@RequestMapping(method=RequestMethod.GET)
+	/*@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<Page<ProdutoDTO>> findPage(
 			@RequestParam(value="nome", defaultValue="") String nome,
 			@RequestParam(value="categorias", defaultValue="") String categorias,
@@ -45,5 +45,11 @@ public class ProdutoResource {
 				
 		return ResponseEntity.ok().body(listDto);
 		
+	}*/
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public ResponseEntity<List<Produto>> findAll(){
+		List<Produto> lista = service.finAll();
+		return ResponseEntity.ok().body(lista);
 	}
 }

@@ -36,4 +36,8 @@ public class ProdutoService {
 		return repo.search(nome, categorias, pageRequest);
 	}
 	
+	public List<Produto> finAll(){
+		return repo.findAll();
+	}
+	
 }
