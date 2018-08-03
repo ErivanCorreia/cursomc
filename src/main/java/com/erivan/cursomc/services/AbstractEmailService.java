@@ -11,6 +11,7 @@ public abstract class AbstractEmailService implements EmailService {
 
 	@Value("${default.sender}")
 	private String sender;
+		
 	
 	@Override
 	public void sendOrderConfirmationEmail(Pedido obj) {
@@ -35,5 +36,7 @@ public abstract class AbstractEmailService implements EmailService {
 		sm.setText(obj.toString());
 		return sm;
 	}
+	
+	
 	
 }
