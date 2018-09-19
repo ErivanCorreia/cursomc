@@ -30,9 +30,11 @@ public class UserSS implements UserDetails{
 	}
 
 
-	public Integer id() {
+	public Integer getId() {
 		return id;
 	}
+	
+	
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -69,6 +71,8 @@ public class UserSS implements UserDetails{
 		return true;
 	}
 	
-	
+	public boolean hasRole(Perfil perfil) {
+		return getAuthorities().contains(new SimpleGrantedAuthority(perfil.getDescricao()));
+	}
 
 }
