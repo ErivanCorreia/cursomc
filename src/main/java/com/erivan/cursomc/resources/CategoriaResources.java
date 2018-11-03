@@ -25,7 +25,7 @@ import com.erivan.cursomc.services.CategoriaService;
  
 
 @RestController
-@RequestMapping(value="/categoria")
+@RequestMapping(value="/categorias")
 public class CategoriaResources {
 
 	@Autowired
